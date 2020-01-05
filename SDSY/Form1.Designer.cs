@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.start = new System.Windows.Forms.Button();
             this.Wczytaj = new System.Windows.Forms.Button();
@@ -53,15 +54,17 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Program = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ilosc_probek)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -319,7 +322,7 @@
             this.tabControl1.Location = new System.Drawing.Point(8, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(369, 343);
+            this.tabControl1.Size = new System.Drawing.Size(369, 344);
             this.tabControl1.TabIndex = 19;
             // 
             // Program
@@ -336,7 +339,7 @@
             this.Program.Location = new System.Drawing.Point(4, 22);
             this.Program.Name = "Program";
             this.Program.Padding = new System.Windows.Forms.Padding(3);
-            this.Program.Size = new System.Drawing.Size(361, 317);
+            this.Program.Size = new System.Drawing.Size(361, 318);
             this.Program.TabIndex = 0;
             this.Program.Text = "Program";
             this.Program.UseVisualStyleBackColor = true;
@@ -352,9 +355,20 @@
             this.tabPage2.Text = "Wczytane pliki";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(0, 3);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(358, 314);
+            this.richTextBox1.TabIndex = 8;
+            this.richTextBox1.Text = "";
+            // 
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
@@ -366,33 +380,79 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(361, 317);
+            this.tabPage1.Size = new System.Drawing.Size(361, 472);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Info";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // label8
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(0, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(358, 314);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "";
+            this.label8.AutoSize = true;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(3, 377);
+            this.label8.MaximumSize = new System.Drawing.Size(330, 0);
+            this.label8.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(330, 62);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "W przypadku gdy chcemy uśrednić próbki w pliku wyjściowym względem wejściowego, n" +
+    "ależy włączyć Uśrednianie i podać z ilu próbek ma powstać jedna (zbyt duże uśred" +
+    "nienie zniekształci wykres)";
             // 
-            // label2
+            // label7
             // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(3, 3);
-            this.label2.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label2.MinimumSize = new System.Drawing.Size(330, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(330, 32);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Aby program działał należy w folderze programu umieścić plik excell o nazwie \"obs" +
-    "zar_roboczy\".";
+            this.label7.AutoSize = true;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(3, 295);
+            this.label7.MaximumSize = new System.Drawing.Size(330, 0);
+            this.label7.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(330, 62);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Wciśnięcie \"Excell Killer\" powoduje zamknięcie wszystkich aktywnych procesów prog" +
+    "ramu \"Excell\", dlatego przed naciśnięciem tego przycisku zamknij wszystkie otwar" +
+    "te arkusze kalkulacyjne.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(135, 271);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 24);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Uwaga!";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(0, 226);
+            this.label5.MaximumSize = new System.Drawing.Size(330, 0);
+            this.label5.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(330, 47);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "W przypadku gdyby z niewiadomych przyczyn program wyrzucał błąd zaraz po włączeni" +
+    "u również należy kliknąć \"Excell Killer\"";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(0, 183);
+            this.label4.MaximumSize = new System.Drawing.Size(330, 0);
+            this.label4.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(330, 32);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Jeśli program został wyłączony podczas działania należy kliknąć w \"Excell Killer\"" +
+    ". ";
             // 
             // label3
             // 
@@ -409,85 +469,54 @@
             this.label3.Text = "Jeżeli w folderze z programem nie ma folderu \"SDS\", należy go utworzyć, ponieważ " +
     "z niego zostaną zaczytane pliki do konwersji";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(3, 101);
-            this.label4.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label4.MinimumSize = new System.Drawing.Size(330, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(330, 32);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Jeśli program został wyłączony podczas działania należy kliknąć w \"Excell Killer\"" +
-    ". ";
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.MaximumSize = new System.Drawing.Size(330, 0);
+            this.label2.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(330, 32);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Aby program działał należy w folderze programu umieścić plik excell o nazwie \"obs" +
+    "zar_roboczy\".";
             // 
-            // label5
+            // label9
             // 
-            this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(3, 144);
-            this.label5.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label5.MinimumSize = new System.Drawing.Size(330, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(330, 47);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "W przypadku gdyby z niewiadomych przyczyn program wyrzucał błąd zaraz po włączeni" +
-    "u również należy kliknąć \"Excell Killer\"";
+            this.label9.AutoSize = true;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(0, 114);
+            this.label9.MaximumSize = new System.Drawing.Size(330, 0);
+            this.label9.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(330, 62);
+            this.label9.TabIndex = 7;
+            this.label9.Text = resources.GetString("label9.Text");
             // 
-            // label6
+            // label10
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(138, 189);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 24);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Uwaga!";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(6, 213);
-            this.label7.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label7.MinimumSize = new System.Drawing.Size(330, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(330, 62);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Wciśnięcie \"Excell Killer\" powoduje zamknięcie wszystkich aktywnych procesów prog" +
-    "ramu \"Excell\", dlatego przed naciśnięciem tego przycisku zamknij wszystkie otwar" +
-    "te arkusze kalkulacyjne.";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(6, 295);
-            this.label8.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label8.MinimumSize = new System.Drawing.Size(330, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(330, 62);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "W przypadku gdy chcemy uśrednić próbki w pliku wyjściowym względem wejściowego, n" +
-    "ależy włączyć Uśrednianie i podać z ilu próbek ma powstać jedna (zbyt duże uśred" +
-    "nienie zniekształci wykres)";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(126, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 24);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Uwaga!";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(385, 353);
+            this.ClientSize = new System.Drawing.Size(383, 349);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(389, 356);
+            this.MinimumSize = new System.Drawing.Size(399, 387);
             this.Name = "Form1";
             this.Text = "Konwerter SDS/CSV";
             this.groupBox1.ResumeLayout(false);
@@ -543,6 +572,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
 

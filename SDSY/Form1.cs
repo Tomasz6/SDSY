@@ -30,6 +30,7 @@ namespace SDSY
 
         private void start_Click(object sender, EventArgs e)
         {
+            
             progress = 0;
             progressBar1.Value = 0;
             if (backgroundWorker1.IsBusy == false && nazwy != null)
@@ -46,9 +47,13 @@ namespace SDSY
             pliki = Directory.GetFiles(Directory.GetCurrentDirectory() + "/SDS");
             nazwy_pobranie();
             if (nazwy != null)
-            this.InvokeIfRequired((value) => progressBar1.Maximum = value, nazwy.Length - 1);
+            {
+                this.InvokeIfRequired((value) => progressBar1.Maximum = value, nazwy.Length - 1);
+                tabControl1.SelectTab(1);
+            }
             else
                 MessageBox.Show("Brak plików do wczytania");
+            
         }
         
         public void Rozdzielanie_danych(List<string> dane)
