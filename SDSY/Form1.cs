@@ -189,8 +189,9 @@ namespace SDSY
             }
             finally
             {
-                
-                if (przerwanie == 1) MessageBox.Show("Zapis pliku '" + nazwy[nr_nazwy] + "' nie powiódł się. \nNależy ponownie uruchomić program, ale przed naciśnięciem start należy użyc Excell Killera");
+
+                if (przerwanie == 1 && stop_button == false) MessageBox.Show("Zapis pliku '" + nazwy[nr_nazwy] + "' nie powiódł się. \nNależy ponownie uruchomić program, ale przed naciśnięciem start należy użyc Excell Killera");
+                else if (przerwanie == 1 && stop_button == true) MessageBox.Show("Program został zatrzymany");
                 else MessageBox.Show("Wszystko przerobione i zapisane");
                 progress = 0;
                 progress2 = 0;
@@ -334,6 +335,12 @@ namespace SDSY
         private void ilosc_probek_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+        bool stop_button = false;
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            stop_button = true;
+            przerwanie = 1;
         }
     }
 }

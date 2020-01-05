@@ -44,15 +44,22 @@ namespace SDSY
 
                     }
                     wiersz++;
+                    if (Form1.przerwanie == 1)
+                        break;
                 }
                 wiersz = 2;
+                if (Form1.przerwanie != 1)
+                {
+                    plik.SaveAs(Directory.GetCurrentDirectory() + "/SDSP/" + name + " - przerobione" + ".xlsx");
+                    plik.Close();
+                    kill_process();
+                    plik = null;
+                    arkusz = null;
+                    app = null;
+                }
+                else
+                    kill_process();
 
-                plik.SaveAs(Directory.GetCurrentDirectory() + "/SDSP/" + name + " - przerobione" + ".xlsx");
-                plik.Close();
-                kill_process();
-                plik = null;
-                arkusz = null;
-                app = null;
             }
             catch(Exception e)
             {

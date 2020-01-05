@@ -65,6 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ilosc_probek)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -88,9 +89,9 @@
             this.start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.start.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.start.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.start.Location = new System.Drawing.Point(125, 68);
+            this.start.Location = new System.Drawing.Point(119, 68);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(113, 48);
+            this.start.Size = new System.Drawing.Size(75, 48);
             this.start.TabIndex = 0;
             this.start.Text = "Start";
             this.start.UseVisualStyleBackColor = false;
@@ -113,7 +114,7 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(6, 19);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(339, 37);
+            this.progressBar1.Size = new System.Drawing.Size(362, 37);
             this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 2;
             // 
@@ -127,14 +128,14 @@
             "Csv"});
             this.Rodzaj_zapisu.Location = new System.Drawing.Point(11, 20);
             this.Rodzaj_zapisu.Name = "Rodzaj_zapisu";
-            this.Rodzaj_zapisu.Size = new System.Drawing.Size(96, 40);
+            this.Rodzaj_zapisu.Size = new System.Drawing.Size(104, 40);
             this.Rodzaj_zapisu.TabIndex = 4;
             this.Rodzaj_zapisu.SelectedIndexChanged += new System.EventHandler(this.Rodzaj_zapisu_SelectedIndexChanged);
             // 
             // checkedListBox1
             // 
             this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.ColumnWidth = 45;
+            this.checkedListBox1.ColumnWidth = 50;
             this.checkedListBox1.Font = new System.Drawing.Font("Goudy Stout", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
@@ -145,7 +146,7 @@
             this.checkedListBox1.Location = new System.Drawing.Point(6, 19);
             this.checkedListBox1.MultiColumn = true;
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(101, 44);
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 44);
             this.checkedListBox1.Sorted = true;
             this.checkedListBox1.TabIndex = 1;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
@@ -156,9 +157,9 @@
             this.EK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.EK.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.EK.Location = new System.Drawing.Point(244, 14);
+            this.EK.Location = new System.Drawing.Point(266, 14);
             this.EK.Name = "EK";
-            this.EK.Size = new System.Drawing.Size(111, 48);
+            this.EK.Size = new System.Drawing.Size(114, 48);
             this.EK.TabIndex = 5;
             this.EK.Text = "Excell Killer";
             this.EK.UseVisualStyleBackColor = false;
@@ -170,16 +171,16 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Usrednianie);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.groupBox1.Location = new System.Drawing.Point(244, 68);
+            this.groupBox1.Location = new System.Drawing.Point(281, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(113, 130);
+            this.groupBox1.Size = new System.Drawing.Size(99, 131);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Uśrednianie";
             // 
             // ilosc_probek
             // 
-            this.ilosc_probek.Location = new System.Drawing.Point(6, 97);
+            this.ilosc_probek.Location = new System.Drawing.Point(6, 91);
             this.ilosc_probek.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -204,7 +205,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 79);
+            this.label1.Location = new System.Drawing.Point(3, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 15);
             this.label1.TabIndex = 2;
@@ -216,7 +217,7 @@
             this.Usrednianie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Usrednianie.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.Usrednianie.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Usrednianie.Location = new System.Drawing.Point(6, 29);
+            this.Usrednianie.Location = new System.Drawing.Point(6, 23);
             this.Usrednianie.Name = "Usrednianie";
             this.Usrednianie.Size = new System.Drawing.Size(70, 36);
             this.Usrednianie.TabIndex = 0;
@@ -228,9 +229,9 @@
             // 
             this.groupBox2.Controls.Add(this.Rodzaj_zapisu);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.groupBox2.Location = new System.Drawing.Point(6, 129);
+            this.groupBox2.Location = new System.Drawing.Point(6, 123);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(113, 69);
+            this.groupBox2.Size = new System.Drawing.Size(121, 69);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Format zapisu";
@@ -239,9 +240,9 @@
             // 
             this.groupBox3.Controls.Add(this.checkedListBox1);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.groupBox3.Location = new System.Drawing.Point(125, 129);
+            this.groupBox3.Location = new System.Drawing.Point(133, 123);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(113, 70);
+            this.groupBox3.Size = new System.Drawing.Size(132, 70);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Delimiter";
@@ -277,7 +278,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.groupBox4.Location = new System.Drawing.Point(6, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(232, 56);
+            this.groupBox4.Size = new System.Drawing.Size(253, 56);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Format wejściowy";
@@ -286,7 +287,7 @@
             // 
             this.progressBar2.Location = new System.Drawing.Point(6, 19);
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(339, 16);
+            this.progressBar2.Size = new System.Drawing.Size(362, 16);
             this.progressBar2.TabIndex = 15;
             this.progressBar2.Click += new System.EventHandler(this.progressBar2_Click);
             // 
@@ -299,7 +300,7 @@
             this.groupBox5.Controls.Add(this.progressBar2);
             this.groupBox5.Location = new System.Drawing.Point(6, 205);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(351, 41);
+            this.groupBox5.Size = new System.Drawing.Size(374, 41);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Zapis pliku";
@@ -309,7 +310,7 @@
             this.groupBox6.Controls.Add(this.progressBar1);
             this.groupBox6.Location = new System.Drawing.Point(6, 252);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(351, 62);
+            this.groupBox6.Size = new System.Drawing.Size(374, 62);
             this.groupBox6.TabIndex = 17;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Postęp konwersji";
@@ -322,11 +323,12 @@
             this.tabControl1.Location = new System.Drawing.Point(8, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(369, 344);
+            this.tabControl1.Size = new System.Drawing.Size(395, 344);
             this.tabControl1.TabIndex = 19;
             // 
             // Program
             // 
+            this.Program.Controls.Add(this.button1);
             this.Program.Controls.Add(this.groupBox4);
             this.Program.Controls.Add(this.start);
             this.Program.Controls.Add(this.groupBox6);
@@ -339,7 +341,7 @@
             this.Program.Location = new System.Drawing.Point(4, 22);
             this.Program.Name = "Program";
             this.Program.Padding = new System.Windows.Forms.Padding(3);
-            this.Program.Size = new System.Drawing.Size(361, 318);
+            this.Program.Size = new System.Drawing.Size(387, 318);
             this.Program.TabIndex = 0;
             this.Program.Text = "Program";
             this.Program.UseVisualStyleBackColor = true;
@@ -350,7 +352,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(361, 317);
+            this.tabPage2.Size = new System.Drawing.Size(387, 318);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Wczytane pliki";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -360,7 +362,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(0, 3);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(358, 314);
+            this.richTextBox1.Size = new System.Drawing.Size(384, 314);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
@@ -380,7 +382,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(361, 472);
+            this.tabPage1.Size = new System.Drawing.Size(387, 318);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Info";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -391,10 +393,10 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.Location = new System.Drawing.Point(3, 377);
-            this.label8.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label8.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label8.MaximumSize = new System.Drawing.Size(350, 0);
+            this.label8.MinimumSize = new System.Drawing.Size(350, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(330, 62);
+            this.label8.Size = new System.Drawing.Size(350, 62);
             this.label8.TabIndex = 6;
             this.label8.Text = "W przypadku gdy chcemy uśrednić próbki w pliku wyjściowym względem wejściowego, n" +
     "ależy włączyć Uśrednianie i podać z ilu próbek ma powstać jedna (zbyt duże uśred" +
@@ -406,10 +408,10 @@
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(3, 295);
-            this.label7.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label7.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label7.MaximumSize = new System.Drawing.Size(350, 0);
+            this.label7.MinimumSize = new System.Drawing.Size(350, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(330, 62);
+            this.label7.Size = new System.Drawing.Size(350, 62);
             this.label7.TabIndex = 5;
             this.label7.Text = "Wciśnięcie \"Excell Killer\" powoduje zamknięcie wszystkich aktywnych procesów prog" +
     "ramu \"Excell\", dlatego przed naciśnięciem tego przycisku zamknij wszystkie otwar" +
@@ -420,7 +422,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(135, 271);
+            this.label6.Location = new System.Drawing.Point(146, 271);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 24);
             this.label6.TabIndex = 4;
@@ -432,10 +434,10 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.Location = new System.Drawing.Point(0, 226);
-            this.label5.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label5.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label5.MaximumSize = new System.Drawing.Size(350, 0);
+            this.label5.MinimumSize = new System.Drawing.Size(350, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(330, 47);
+            this.label5.Size = new System.Drawing.Size(350, 47);
             this.label5.TabIndex = 3;
             this.label5.Text = "W przypadku gdyby z niewiadomych przyczyn program wyrzucał błąd zaraz po włączeni" +
     "u również należy kliknąć \"Excell Killer\"";
@@ -446,10 +448,10 @@
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.Location = new System.Drawing.Point(0, 183);
-            this.label4.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label4.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label4.MaximumSize = new System.Drawing.Size(350, 0);
+            this.label4.MinimumSize = new System.Drawing.Size(350, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(330, 32);
+            this.label4.Size = new System.Drawing.Size(350, 32);
             this.label4.TabIndex = 2;
             this.label4.Text = "Jeśli program został wyłączony podczas działania należy kliknąć w \"Excell Killer\"" +
     ". ";
@@ -461,10 +463,10 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(3, 43);
-            this.label3.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label3.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label3.MaximumSize = new System.Drawing.Size(350, 0);
+            this.label3.MinimumSize = new System.Drawing.Size(350, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(330, 47);
+            this.label3.Size = new System.Drawing.Size(350, 47);
             this.label3.TabIndex = 1;
             this.label3.Text = "Jeżeli w folderze z programem nie ma folderu \"SDS\", należy go utworzyć, ponieważ " +
     "z niego zostaną zaczytane pliki do konwersji";
@@ -475,10 +477,10 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(3, 3);
-            this.label2.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label2.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label2.MaximumSize = new System.Drawing.Size(350, 0);
+            this.label2.MinimumSize = new System.Drawing.Size(350, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(330, 32);
+            this.label2.Size = new System.Drawing.Size(350, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Aby program działał należy w folderze programu umieścić plik excell o nazwie \"obs" +
     "zar_roboczy\".";
@@ -489,10 +491,10 @@
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(0, 114);
-            this.label9.MaximumSize = new System.Drawing.Size(330, 0);
-            this.label9.MinimumSize = new System.Drawing.Size(330, 0);
+            this.label9.MaximumSize = new System.Drawing.Size(350, 0);
+            this.label9.MinimumSize = new System.Drawing.Size(350, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(330, 62);
+            this.label9.Size = new System.Drawing.Size(350, 62);
             this.label9.TabIndex = 7;
             this.label9.Text = resources.GetString("label9.Text");
             // 
@@ -501,18 +503,31 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(126, 90);
+            this.label10.Location = new System.Drawing.Point(146, 90);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 24);
             this.label10.TabIndex = 8;
             this.label10.Text = "Uwaga!";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Firebrick;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.button1.Location = new System.Drawing.Point(200, 68);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 48);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Stop";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(383, 349);
+            this.ClientSize = new System.Drawing.Size(410, 349);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
@@ -574,6 +589,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button1;
     }
 }
 
