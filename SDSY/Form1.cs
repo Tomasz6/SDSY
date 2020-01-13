@@ -21,11 +21,9 @@ namespace SDSY
         
         string delimiter;
         public static int progress = 0;
-        zapis_xlsx zapis_Xlsx = new zapis_xlsx();
         string[] pliki;
         string[] nazwy;
         int nr_nazwy = 0;
-        List<string> wczytane_dane = new List<string>();
         public static short przerwanie = 0;
 
         private void start_Click(object sender, EventArgs e)
@@ -120,13 +118,14 @@ namespace SDSY
             if (zaznaczone) zapis_do_csv(nazwy[nr_nazwy], dane_int, ilosc_kolumn);
 
             this.InvokeIfRequired((value) => zaznaczone = Rodzaj_zapisu.GetItemChecked(0), 0);
+            zapis_xlsx zapis_Xlsx = new zapis_xlsx();
             if (zaznaczone)  zapis_Xlsx.zapis2(nazwy[nr_nazwy], dane_int, ilosc_kolumn);
             progress2= dane_int.Count / ilosc_kolumn / (int)ilosc_probek.Value;
             progress++;
             
 
             dane.Clear();
-            wczytane_dane.Clear();
+            
         }
 
         void dostosowanie_CSV(ref List<double> dane)
@@ -164,6 +163,7 @@ namespace SDSY
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+            List<string> wczytane_dane = new List<string>();
             nr_nazwy = 0;
             try
             {
