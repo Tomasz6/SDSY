@@ -15,8 +15,17 @@ namespace SDSY
         public Form1()
         {
             InitializeComponent();
-            checkedListBox1.SetItemChecked(0, true);
+            checkedListBox1.SetItemChecked(3, true);
             SDS.Select();
+            if (Properties.Settings.Default.sciezka_odczytu_se.Count() > 4)
+                sciezka_zaczytania.Text = Properties.Settings.Default.sciezka_odczytu_se;
+            else
+                sciezka_zaczytania.Text = Directory.GetCurrentDirectory() + (char)92 + "SDS";
+            if (Properties.Settings.Default.sciezka_zapisu_se.Count() > 4)
+                sciezka_zapisu.Text = Properties.Settings.Default.sciezka_zapisu_se;
+            else
+                sciezka_zapisu.Text = Directory.GetCurrentDirectory() + (char)92 + "SDSP";
+
         }
         
         string delimiter;
@@ -42,7 +51,7 @@ namespace SDSY
 
         private void Wczytaj_Click(object sender, EventArgs e)
         {
-            pliki = Directory.GetFiles(Directory.GetCurrentDirectory() + "/SDS");
+            pliki = Directory.GetFiles(sciezka_zaczytania.Text, "*.csv");
             nazwy_pobranie();
             if (nazwy != null)
             {
@@ -115,11 +124,12 @@ namespace SDSY
 
             }
             this.InvokeIfRequired((value) => zaznaczone = Rodzaj_zapisu.GetItemChecked(1), 0);
-            if (zaznaczone) zapis_do_csv(nazwy[nr_nazwy], dane_int, ilosc_kolumn);
+
+            if (zaznaczone) zapis_do_csv(nazwy[nr_nazwy], dane_int, ilosc_kolumn, Properties.Settings.Default.sciezka_zapisu_se);
 
             this.InvokeIfRequired((value) => zaznaczone = Rodzaj_zapisu.GetItemChecked(0), 0);
             zapis_xlsx zapis_Xlsx = new zapis_xlsx();
-            if (zaznaczone)  zapis_Xlsx.zapis2(nazwy[nr_nazwy], dane_int, ilosc_kolumn);
+            if (zaznaczone)  zapis_Xlsx.zapis2(nazwy[nr_nazwy], dane_int, ilosc_kolumn, Properties.Settings.Default.sciezka_zapisu_se);
             progress2= dane_int.Count / ilosc_kolumn / (int)ilosc_probek.Value;
             progress++;
             
@@ -142,11 +152,19 @@ namespace SDSY
         }
         void nazwy_pobranie()
         {
-            string sciezka = Directory.GetCurrentDirectory()+"/SDS/";
+            short poczatek = 0;
+            for (int i = pliki[0].Length-1; i > 0; i--)
+            {
+                if (pliki[0][i] == (char)92)
+                {
+                    poczatek = (short)(i+1);
+                    break;
+                }
+            }
             string temp = null;
             for (int i = 0; i < pliki.Length; i++)
             {
-                for (int j = sciezka.Length; j < pliki[i].Length - 3; j++)
+                for (int j = poczatek; j < pliki[i].Length - 3; j++)
                 {
                     temp += pliki[i][j];
                 }
@@ -203,11 +221,11 @@ namespace SDSY
             
         }
 
-        void zapis_do_csv(string name, List<double> dane, int ilosc_kolumn)
+        void zapis_do_csv(string name, List<double> dane, int ilosc_kolumn, string sciezka_zapisu)
         {
             try
            {
-               using (StreamWriter plik = new StreamWriter(Directory.GetCurrentDirectory() + "/SDSP/" + name + ".csv"))
+               using (StreamWriter plik = new StreamWriter(sciezka_zapisu + "/" + name + ".csv"))
                {
                     plik.WriteLine("Time" + delimiter + "CH1" + delimiter + "CH2");
                    for (int i = 0; i < dane.Count / 3 - 1; i++)
@@ -341,6 +359,46 @@ namespace SDSY
         {
             stop_button = true;
             przerwanie = 1;
+        }
+
+        private void sciezka_zaczytania_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog FBD = new FolderBrowserDialog();
+            FBD.Description = "Wybierz folder z którego mają zostać zaczytane pliki CSV lub SDS";
+            FBD.RootFolder = Environment.SpecialFolder.MyComputer;
+            if (FBD.ShowDialog() == DialogResult.OK)
+            {
+                sciezka_zaczytania.Text = FBD.SelectedPath;
+                Properties.Settings.Default.sciezka_odczytu_se = FBD.SelectedPath;
+                Properties.Settings.Default.Save();
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            FolderBrowserDialog FBD = new FolderBrowserDialog();
+            FBD.Description = "Wybierz folder do którego mają zostać zapisane pliki po konwersji";
+            FBD.RootFolder = Environment.SpecialFolder.MyComputer;
+            if (FBD.ShowDialog() == DialogResult.OK)
+            {
+                sciezka_zapisu.Text = FBD.SelectedPath;
+                Properties.Settings.Default.sciezka_zapisu_se = FBD.SelectedPath;
+                Properties.Settings.Default.Save();
+            }
+        }
+        
+        private void domyslne_Click(object sender, EventArgs e)
+        {
+            sciezka_zaczytania.Text = Directory.GetCurrentDirectory() + (char)92 + "SDS";
+            sciezka_zapisu.Text = Directory.GetCurrentDirectory() + (char)92 + "SDSP";
+            Properties.Settings.Default.sciezka_odczytu_se = Directory.GetCurrentDirectory() + (char)92 + "SDS";
+            Properties.Settings.Default.sciezka_zapisu_se = Directory.GetCurrentDirectory() + (char)92 + "SDSP";
+            Properties.Settings.Default.Save();
         }
     }
 }

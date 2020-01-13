@@ -11,7 +11,7 @@ namespace SDSY
 {
     public class zapis_xlsx
     {
-        public void zapis2(string name, List<double> liczby, int kolumny)
+        public void zapis2(string name, List<double> liczby, int kolumny, string sciezka_zapisu)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace SDSY
                 wiersz = 2;
                 if (Form1.przerwanie != 1)
                 {
-                    plik.SaveAs(Directory.GetCurrentDirectory() + "/SDSP/" + name + " - przerobione" + ".xlsx");
+                    plik.SaveAs(sciezka_zapisu+"/" + name + " - przerobione" + ".xlsx");
                     plik.Close();
                     kill_process();
                     plik = null;
